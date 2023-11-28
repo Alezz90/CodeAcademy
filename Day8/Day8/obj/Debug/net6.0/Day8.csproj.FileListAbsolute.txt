@@ -1,0 +1,14 @@
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\bin\Debug\net6.0\Day8.exe
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\bin\Debug\net6.0\Day8.deps.json
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\bin\Debug\net6.0\Day8.runtimeconfig.json
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\bin\Debug\net6.0\Day8.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\bin\Debug\net6.0\Day8.pdb
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.AssemblyInfo.cs
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\refint\Day8.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.pdb
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\Day8.genruntimeconfig.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\Day8\Day8\obj\Debug\net6.0\ref\Day8.dll

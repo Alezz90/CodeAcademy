@@ -439,15 +439,28 @@ namespace Task1
             //Console.WriteLine("Enter size of your array");
             //int n = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("Enter element of array");
-            //int res = 0;
-            //int[] array = new int[n];
+
+            //int aar = 0;
+            //int[] array20 = new int[n];
+            //int[] array20Copy = array20;
+            //int[] array21 = new int[aar];
             //for (int i = 0; i < n; i++)
             //{
+            //    array20[i] = Convert.ToInt32(Console.ReadLine());
 
-            //    array[i] = Convert.ToInt32(Console.ReadLine());
-            //    res = array[i] + res;
             //}
-            //Console.WriteLine($"  sum of all elements of the array is {res * res}");
+            //for (int i = 0; i < array20.Length; i++)
+            //{
+            //    for (int j = i + 1; j < array20.Length; j++)
+            //    {
+            //        if (array20[i] == array20[j])
+            //        {
+            //            aar += 1;
+            //            array21[i] = i + 1;
+            //        }
+            //    }
+            //}
+            //Console.WriteLine($"{array21.Length}");
             #endregion
 
             #region 21
@@ -485,31 +498,31 @@ namespace Task1
             #region 22
             /*
              *22. Write a program in C# Sharp to count the frequency of each element of an array. */
-            Console.WriteLine("Enter size of your arrays");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("enter element of first array");
-            int[] array = new int[n];
-            int f = 0;
-            int[] frequentElem = new int[f];
-            for (int i = 0; i < n; i++)
-            {
-                array[i] = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter size of your arrays");
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("enter element of first array");
+            //int[] array = new int[n];
+            //int f = 0;
+            //int[] frequentElem = new int[f];
+            //for (int i = 0; i < n; i++)
+            //{
+            //    array[i] = Convert.ToInt32(Console.ReadLine());
 
-            }
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 1; j < n; j++)
-                {
+            //}
+            //for (int i = 0; i < n; i++)
+            //{
+            //    for (int j = 1; j < n; j++)
+            //    {
 
-                    if (array[i] == array[j])
-                    {
-                        frequentElem[i] = array[j];
-                    }
+            //        if (array[i] == array[j])
+            //        {
+            //            frequentElem[i] = array[j];
+            //        }
 
-                }
-               
-            }
-            Console.WriteLine(frequentElem.Length);
+            //    }
+
+            //}
+            //Console.WriteLine(frequentElem.Length);
             #endregion
 
             #region 23
@@ -547,23 +560,24 @@ namespace Task1
             #region 25
             /*write a program find the longest distance between Two equal cells. In this example. The distance is measured by the number Of cells- for example, the distance between the first and the fourth cell is 2 (cell 2 and cell 3).
             */
-            //int [] array25 = new int[] { 7, 0, 0, 0, 5, 6, 7, 5, 0, 7, 5, 3 };
-            //int dist = 0;
-            //int disV = 0;
-            //for(int i = 0; i < array25.Length; i++)
-            //{
-            //    if (array25[i] == disV){
-            //            dist = array25[i];
-            //        }
-            //}
-            //for (int i = array25.Length; i == 0 ; i--)
-            //{
-            //    if (array25[i] == disV)
-            //    {
-            //        disV = array25[i];
-            //    }
-            //}
-            // Console.WriteLine( disV - dist);
+            int[] array25 = new int[] { 7, 0, 0, 0, 5, 6, 7, 5, 0, 7, 5, 3 };
+            int dist = 0;
+            int disV = 0;
+            for (int i = 0; i < array25.Length; i++)
+            {
+                if (array25[i] == disV)
+                {
+                    dist = array25[i];
+                }
+            }
+            for (int i = array25.Length; i == 0; i--)
+            {
+                if (array25[i] == disV)
+                {
+                    disV = array25[i];
+                }
+            }
+            Console.WriteLine(disV - dist);
 
 
             #endregion

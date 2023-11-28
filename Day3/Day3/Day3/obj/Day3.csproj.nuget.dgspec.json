@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell\\Desktop\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj": {}
+    "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\Desktop\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj": {
+    "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\Desktop\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj",
+        "projectUniqueName": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj",
         "projectName": "Day3",
-        "projectPath": "C:\\Users\\dell\\Desktop\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj",
+        "projectPath": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\Day3\\Day3\\Day3\\Day3.csproj",
         "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\Desktop\\CodeAcademy\\Day3\\Day3\\Day3\\obj\\",
+        "outputPath": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\Day3\\Day3\\Day3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
