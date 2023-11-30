@@ -1,0 +1,14 @@
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.AssemblyInfo.cs
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\chart\Day12\Day12\bin\Debug\net6.0\Day12.exe
+C:\Users\dell\Desktop\chart\Day12\Day12\bin\Debug\net6.0\Day12.deps.json
+C:\Users\dell\Desktop\chart\Day12\Day12\bin\Debug\net6.0\Day12.runtimeconfig.json
+C:\Users\dell\Desktop\chart\Day12\Day12\bin\Debug\net6.0\Day12.dll
+C:\Users\dell\Desktop\chart\Day12\Day12\bin\Debug\net6.0\Day12.pdb
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.dll
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\refint\Day12.dll
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.pdb
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\Day12.genruntimeconfig.cache
+C:\Users\dell\Desktop\chart\Day12\Day12\obj\Debug\net6.0\ref\Day12.dll
