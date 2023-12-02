@@ -1,96 +1,121 @@
 ﻿namespace Task3Maze
 {
-    internal class Program
+    class Program
     {
-        static char[,] MazS(char e=' ') {
-            int nx = 2;
-            int zy = 5;
-            switch (e)
-            {
-                case 'U':
-                    nx-=1;
-                    break;
-                case 'L':
-                    zy-= 1;
-                    break;
-                case 'D':
-                    nx+= 1;
-                    break;
-                case 'R':
-                    zy+= 1;
-                    break;
+        static int prevX = 2;
+        static int prevY = 5;
+        static string[,] Maz()
+        {
+            int x = 9;
+            int y = 11;
 
-            }
-            int x = 8;
-            int y = 10;
-            char[,] Maz = new char[x, y];
+
+            string[,] Maz = new string[x, y];
 
             for (int i = 0; i < x; i++)
             {
                 for (int j = 0; j < y; j++)
                 {
-                    //squer border
-                    if (i == 0 || i == x - 1 || j == 0 || j == y - 1)
+                    if (i == 0 || i == x - 1 || j == 0 || j == y - 1 || (i >= 2 && i <= 4 && j == 4) || (i == 3 && j == 3))
                     {
-                        Maz[i, j] = '#';
+                        Maz[i, j] = "#";
                     }
-                    else if (i == 2 && j == 4 || i == 3 && j == 4 || i == 4 && j == 4 || i == 3 && j == 3)
-                    //Squer insid
+                    else if (i == prevX && j == prevY)
                     {
-                        Maz[i, j] = '#';
+                        Maz[i, j] = "E";
                     }
-                    else if (i == 8 && j == 9)
-                    //Squer E
+                    else if (i == 7 && j == 8)
                     {
-                        Maz[i, j] = 'x';
+                        Maz[i, j] = "Exit";
                     }
-                    else if (i == nx && j == zy)
-                    //Squer E
-                    {
-                        if (Maz[i, j] != '#')
-                        {
-                            Maz[i, j] = 'E';
-                            nx = i;
-                            zy=j;
-                        }
 
-
-                    }
-                    else//Squer Empty
+                    else
                     {
-                        Maz[i, j] = ' ';
+                        Maz[i, j] = " ";
                     }
                 }
             }
-            for (int i = 0; i < x; i++)
+            return Maz;
+        }
+        static void printMaz()
+        {
+            string[,] MazPrint = Maz();
+            for (int i = 0; i < 9; i++)
             {
-                for (int j = 0; j < y; j++)
+                for (int j = 0; j < 11; j++)
                 {
-                    Console.Write(Maz[i, j]);
-                  
+                    Console.Write(MazPrint[i, j]);
                 }
                 Console.WriteLine();
             }
-
-            return Maz;
         }
-        static void YX(out int xx, out int yy)
+        static string MazPlay(string e)
         {
-            xx = 1;
-            yy = 2;
+            int newx = prevX;
+            int newy = prevY;
+            string[,] MazE = Maz();
+            switch (e)
+            {
+                case "U":
+                    newx -= 1;
+                    break;
+                case "L":
+                    newy -= 1;
+                    break;
+                case "D":
+                    newx += 1;
+                    break;
+                case "R":
+                    newy += 1;
+                    break;
+            }
+            if (newx == 7 && newy == 8)
+            {
+
+                Console.WriteLine("congratulations ");
+                return "Finsh";
+            }
+            else if (newy >= 0 || newy < 9 || newy >= 0 || newy < 10)
+            {
+                if (MazE[newx, newy] != "#" && MazE[newx, newy] != "Exit")
+                {
+                    MazE[newx, newy] = "E";
+                    MazE[prevX, prevY] = " ";
+                    prevX = newx;
+                    prevY = newy;
+                    printMaz();
+                    return "s";
+
+                }
+            }
+            return "e";
         }
+
         static void Main(string[] args)
         {
-            int xx = 0;
-            int yy = 0;
-
-
-           MazS();
+            printMaz();
             while (true)
             {
-                Console.WriteLine("Enter to U-Up,D-Down,L-left,R-right");
-                char E = Convert.ToChar(Console.ReadLine());
-                MazS(E);
+
+                Console.WriteLine("Enter U-Up, D-Down, L-Left, R-Right");
+                string move = Console.ReadLine().ToUpper();
+
+                if (move == "U" || move == "R" || move == "D" || move == "L")
+
+                {
+                    string moveSuccessful = MazPlay(move);
+
+                    if (moveSuccessful == "Finsh")
+                    {
+                        break;
+                    }
+                    if (moveSuccessful == "e")
+                    {
+                        Console.WriteLine(" move error");
+                    }
+                }
+
+
             }
         }
     }
