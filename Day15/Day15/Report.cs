@@ -10,10 +10,7 @@ namespace Day15
     {
         public delegate bool filterEmp(Employee emp);
         public delegate bool MultiCasting(Employee emp,int x);
-        public void MultiCastiDelgat(Employee[] emp, string title, MultiCasting DDe)
-        {
-
-        }
+       
         public Employee[] TotalSaleseefilter(Employee[] emp, string title, filterEmp DDe)
         {
             int x = 0;
@@ -36,7 +33,12 @@ namespace Day15
                 }
             }return result;
         }
-            public void TotalSalesee3ok(Employee[] emp)
+        public void TotalSalesee(Employee[] emp, filterEmp DDe)
+        {
+            Console.WriteLine($"{ emp.Length}");
+
+        }
+        public void TotalSalesee3ok(Employee[] emp)
         {
             foreach (Employee e in emp)
             {

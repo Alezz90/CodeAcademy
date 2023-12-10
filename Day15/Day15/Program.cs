@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Xml.Linq;
+using static Day15.Report;
 
 namespace Day15
 {
@@ -29,10 +30,11 @@ namespace Day15
                new Employee{Name="name5",Gender="M",TotalSale=1}
           };
              Report report = new Report();
+            report.TotalSalesee(employee, (emp) => emp.TotalSale >= 3);
             /* report.TotalSalesee3ok(employee);
              report.TotalSalesee2ok(employee);
              report.TotalSalesee1ok(employee);*/
-
+         
             report.TotalSaleseefilter(employee, $"More than 3 ", (emp) => emp.TotalSale >= 3);
             report.TotalSaleseefilter(employee, $"More than 2 ", (emp) => emp.TotalSale >= 2 && emp.TotalSale < 3);
             report.TotalSaleseefilter(employee, $"More than 1 ", (emp) => (emp.TotalSale >= 1 && emp.TotalSale < 2));
@@ -41,6 +43,7 @@ namespace Day15
 
            // List<Employee> result = report.TotalSaleseefilter(employee, $"filering female ", (emp) => (emp.Gender == "f"));
             int resultle = report.TotalSaleseefilter(employee, $"filering female ", (emp) => (emp.Gender == "f")).Length;
+            report.TotalSalesee(employee, (emp) => emp.TotalSale >= 3);
             Console.WriteLine(resultle);
            
 
