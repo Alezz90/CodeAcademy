@@ -1,0 +1,47 @@
+﻿
+@*@model IEnumerable<Day2MVC.Models.ToDo>*@
+@model List<Day2MVC.Models.ToDo>
+
+@{
+    ViewData["Title"] = "To Do List";
+}
+<div>
+    @await Html.PartialAsync("_Search",new Day2MVC.Models.ToDo())
+</div>
+
+<!--looooop the list-->
+<div class="d-flex flex-column align-items-center bg-light backgroundImag">
+        @foreach (var item in Model)
+        {
+    <div class=" w-75" >
+        <div class="card w-75 bg-transparent border border-dark rounded-3 m-3">
+            <div class="card-body d-flex justify-content-between">
+                        <h3 class="card-title">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </h3>
+                        <p>
+                        @Html.DisplayFor(modelItem => item.Description)
+                        </p>
+
+                    <a asp-action="Delete" asp-route-id="@item.TODOID">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </a>
+
+                    <a href="/ToDo/Index?id=@item.TODOID">
+                        <span class="material-symbols-outlined">
+                            Update
+                        </span>
+                    </a>
+                 
+            </div>
+        </div>
+    </div>
+        }
+        </div>
+       <!--creat new Item-->
+<div>
+        @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())
+</div>
+

@@ -1,0 +1,13 @@
+﻿@model Day2MVC.Models.ToDo
+@{
+}
+
+@using (Html.BeginForm("Save", "ToDo", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+<div class=" container form-inline d-flex m-3">
+        @ViewBag.Name
+        @Html.EditorFor(model => model.Name, "Name", new { htmlAttributes = new { @class="form-control" } })
+        @Html.EditorFor(model => model.Description,"Description", new { htmlAttributes = new { @class="form-control" } })
+        <input type="submit" value="Save" class="btn btn-primary" />
+</div>
+}

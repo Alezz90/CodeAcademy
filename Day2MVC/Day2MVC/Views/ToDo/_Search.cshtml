@@ -1,0 +1,15 @@
+﻿@model Day2MVC.Models.ToDo
+@{
+}
+
+@using (Html.BeginForm("Search", "ToDo", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+
+    <div class="form-inline d-flex my-3">
+        <input type="text" class="form-control" placeholder="Search" id="SearchText" name="Name" />
+
+        <button type="submit" class="btn btn-primary mx-2" id="Search">
+            Search
+        </button>
+    </div>
+}
