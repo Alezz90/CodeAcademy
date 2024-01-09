@@ -1,0 +1,14 @@
+﻿
+@model Day2MVC.Models.ToDo
+@{
+    ViewBag.Title = "UpdateItem";
+}
+@using (Html.BeginForm("Update", "ToDo", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+    <div class=" container form-inline d-flex m-3">
+
+        @Html.EditorFor(model => model.Name, "Name", new { htmlAttributes = new { @class="form-control" } })
+        @Html.EditorFor(model => model.Description,"Description", new { htmlAttributes = new { @class="form-control" } })
+        <input type="submit" value="Update" class="btn btn-primary" />
+    </div>
+}

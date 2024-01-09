@@ -1,0 +1,26 @@
+﻿@model Employee
+
+
+<h2> Update Employee Info </h2>
+
+<form asp-action="Update">
+
+    <div class="form-control">
+        <label asp-for="Name" class="form-control"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="phoncontact" class="form-control"></label>
+        <input asp-for="phoncontact" class="form-control" />
+        <span asp-validation-for="phoncontact" class="text-danger"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="Datestart" class="form-control"></label>
+        <input asp-for="Datestart" class="form-control" />
+        <span asp-validation-for="Datestart" class="text-danger"></span>
+    </div>
+
+    <input type="submit" class="btn btn-primary" />
+    | <a asp-action="Index" class="btn btn-dark"> Back to List</a>
+</form>

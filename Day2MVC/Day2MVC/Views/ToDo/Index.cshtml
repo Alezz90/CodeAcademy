@@ -38,10 +38,21 @@
             </div>
         </div>
     </div>
-        }
-        </div>
+    }
+</div>
        <!--creat new Item-->
 <div>
-        @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())
-</div>
+    @*   @if (ViewData["_Update"] != null)
+    {
+  
+    @await Html.PartialAsync("_Update",new Day2MVC.Models.ToDo())
+      
+        }
+    else {
 
+        @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())
+    }*@
+    @await Html.PartialAsync("_Update",new Day2MVC.Models.ToDo())
+    @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())
+        </div>
+   

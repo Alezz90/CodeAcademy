@@ -1,0 +1,21 @@
+﻿@model Department
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="card w-75 mb-3">
+    <div class="card-body">
+        <h5 class="card-title"> @Model.Id </h5>
+        <h5 class="card-body text-secondary"> Department Name</h5>
+        <h3 class="card-title">@Model.Name</h3>
+        <h5 class="card-body text-secondary"> Mager Name </h5>
+        <h5 class="card-subtitle"> @Model.MangerName</h5>
+        <h5 class="card-body text-secondary"> numer of Employees: </h5>
+        <h5 class="card-body"> @Model.numberOfemp </h5>
+        <a asp-controller="Department" asp-action="Update" asp-route-id="@Model.Id" class="btn btn-info"> Update  </a>
+        <a asp-action="Index" class="btn btn-dark"> Back to List</a>
+
+    </div>
+</div>

@@ -3,7 +3,9 @@ using Day2MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Xml.Linq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Day2MVC.Controllers
 {
@@ -14,45 +16,33 @@ namespace Day2MVC.Controllers
         {
             this._dbContext = todo;
         }
-        public IActionResult Index(int? id)
+      /*  public IActionResult Index(int? id)
         {
-             var _ToDosList = (from x in _dbContext.ToDos select x).ToList();
-            if (id != null)
-            {
-                var MyToDO = (from x in _dbContext.ToDos where x.TODOID == id select x).FirstOrDefault();
-                if (MyToDO != null)
-                {
-                    ViewBag.Name = MyToDO.Name;
-                    ViewBag.Description = MyToDO.Description;
-                   // var model = new ToDo { Name = MyToDO.Name, Description = MyToDO.Description };
-                     return PartialView("_AddItem");
-                }
-                return RedirectToAction("Index");
-            }
-            return View(_ToDosList);
-            
-        }
-        [HttpPost]
+            var _ToDosList = (from x in _dbContext.ToDos select x).ToList();
+
+            return View( _ToDosList);
+        }*/
+              public IActionResult Index(int? id)
+              {
+            var _ToDosList = (from x in _dbContext.ToDos select x).ToList();
+
+                      return View(_ToDosList);
+              }
+
+            [HttpPost]
         public IActionResult Save(int? id, string name, string? description)
         {
-          
-            if (id != null)
+            if (ModelState.IsValid)
             {
-                var MyToDO = (from x in _dbContext.ToDos where x.TODOID == id select x).FirstOrDefault();
-                MyToDO.Name = name;
-                MyToDO.Description = description;
-                _dbContext.ToDos.Update(MyToDO);
-               
-                return RedirectToAction("Index");
-            } else {
                 ToDo toDo = new ToDo();
                 toDo.Name = name;
-            toDo.Description = description;
-            _dbContext.ToDos.Add(toDo);
-           
-        }
-            _dbContext.SaveChanges();
-            return RedirectToAction("Index");
+                toDo.Description = description;
+                _dbContext.ToDos.Update(toDo);
+                _dbContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            return View();
 
         }
 
@@ -73,7 +63,28 @@ namespace Day2MVC.Controllers
             return View("Index",MyToDO);
 
         }
+        
+        public IActionResult Update(int id )
+        {
+                var MyToDO = _dbContext.ToDos.Find(id);
+           
+                return PartialView("_Update",MyToDO);
+        }
+
+         /*  
+        public IActionResult Update(int? id, string name, string? description)
+        {
+                var MyToDO = (from x in _dbContext.ToDos where x.TODOID == id select x).FirstOrDefault();
+                MyToDO.Name = name;
+                MyToDO.Description = description;
+                _dbContext.ToDos.Update(MyToDO);
+                _dbContext.SaveChanges();
+
+                return RedirectToAction("Index");
+
+        }
 
 
+        */
     }
 }

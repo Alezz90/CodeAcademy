@@ -1,0 +1,26 @@
+﻿@model Department
+
+
+<h2> Update Department Info </h2>
+
+<form asp-action="Update">
+
+    <div class="form-control">
+        <label asp-for="Name" class="form-control"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="MangerName" class="form-control"></label>
+        <input asp-for="MangerName" class="form-control" />
+        <span asp-validation-for="MangerName" class="text-danger"></span>
+    </div>
+    <div class="form-control">
+        <label asp-for="numberOfemp" class="form-control"></label>
+        <input asp-for="numberOfemp" class="form-control" />
+        <span asp-validation-for="numberOfemp" class="text-danger"></span>
+    </div>
+
+    <input type="submit" class="btn btn-primary" />
+    | <a asp-action="Index" class="btn btn-dark"> Back to List</a>
+</form>

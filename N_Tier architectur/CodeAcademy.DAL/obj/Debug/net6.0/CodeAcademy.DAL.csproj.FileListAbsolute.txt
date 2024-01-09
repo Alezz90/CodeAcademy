@@ -1,0 +1,12 @@
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\bin\Debug\net6.0\CodeAcademy.DAL.deps.json
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\bin\Debug\net6.0\CodeAcademy.DAL.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\bin\Debug\net6.0\CodeAcademy.DAL.pdb
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.AssemblyInfo.cs
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\refint\CodeAcademy.DAL.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\CodeAcademy.DAL.pdb
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\N_Tier architectur\CodeAcademy.DAL\obj\Debug\net6.0\ref\CodeAcademy.DAL.dll
