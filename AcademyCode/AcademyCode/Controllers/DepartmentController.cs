@@ -1,5 +1,5 @@
 ﻿using AcademyCode.BLL.Interface;
-using CodeAcademy.DAL.Model;
+using AcademyCode.DAL.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.Intrinsics.Arm;

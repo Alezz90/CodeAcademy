@@ -10,11 +10,24 @@
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
-    
     <div class="form-control">
         <label asp-for="phoncontact" class="form-control"></label>
-        <input asp-for="phoncontact" class="form-control" />
+        <input asp-for="phoncontact" class="form-control" id="Datestart" />
         <span asp-validation-for="phoncontact" class="text-danger"></span>
+      
+    </div>
+    
+    <div class="form-control">
+        <label asp-for="DepartmentID" class="form-control"></label>
+        <select name="languages" id="lang" asp-for="DepartmentID" class="form-control">
+            <option value="javascript">JavaScript</option>
+            </select>
+          @*   @foreach (var item in Model) *@
+            {
+                <option value="javascript">JavaScript</option>
+            }
+            <span asp-validation-for="DepartmentID" class="text-danger"></span>
+      
     </div>
     <div class="form-control">
         <label asp-for="Datestart" class="form-control"></label>

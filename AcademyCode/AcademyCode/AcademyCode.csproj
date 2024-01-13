@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\N_Tier architectur\AcademyCode.BLL\AcademyCode.BLL.csproj" />
+    <ProjectReference Include="..\AcademyCode.BLL\AcademyCode.BLL.csproj" />
   </ItemGroup>
 
 </Project>

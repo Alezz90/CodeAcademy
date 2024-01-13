@@ -784,7 +784,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "CodeAcademy.DAL": "1.0.0"
+          "AcademyCode.DAL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/AcademyCode.BLL.dll": {}
@@ -793,18 +793,17 @@
           "bin/placeholder/AcademyCode.BLL.dll": {}
         }
       },
-      "CodeAcademy.DAL/1.0.0": {
+      "AcademyCode.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "compile": {
-          "bin/placeholder/CodeAcademy.DAL.dll": {}
+          "bin/placeholder/AcademyCode.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CodeAcademy.DAL.dll": {}
+          "bin/placeholder/AcademyCode.DAL.dll": {}
         }
       }
     }
@@ -2028,13 +2027,13 @@
     },
     "AcademyCode.BLL/1.0.0": {
       "type": "project",
-      "path": "../../N_Tier architectur/AcademyCode.BLL/AcademyCode.BLL.csproj",
-      "msbuildProject": "../../N_Tier architectur/AcademyCode.BLL/AcademyCode.BLL.csproj"
+      "path": "../AcademyCode.BLL/AcademyCode.BLL.csproj",
+      "msbuildProject": "../AcademyCode.BLL/AcademyCode.BLL.csproj"
     },
-    "CodeAcademy.DAL/1.0.0": {
+    "AcademyCode.DAL/1.0.0": {
       "type": "project",
-      "path": "../../N_Tier architectur/CodeAcademy.DAL/CodeAcademy.DAL.csproj",
-      "msbuildProject": "../../N_Tier architectur/CodeAcademy.DAL/CodeAcademy.DAL.csproj"
+      "path": "../AcademyCode.DAL/AcademyCode.DAL.csproj",
+      "msbuildProject": "../AcademyCode.DAL/AcademyCode.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2070,6 +2069,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode.BLL\\AcademyCode.BLL.csproj": {
+              "projectPath": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode.BLL\\AcademyCode.BLL.csproj"
+            },
             "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\N_Tier architectur\\AcademyCode.BLL\\AcademyCode.BLL.csproj": {
               "projectPath": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\N_Tier architectur\\AcademyCode.BLL\\AcademyCode.BLL.csproj"
             }

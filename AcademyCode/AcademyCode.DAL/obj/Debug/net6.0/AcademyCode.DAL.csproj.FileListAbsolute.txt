@@ -1,0 +1,12 @@
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\bin\Debug\net6.0\AcademyCode.DAL.deps.json
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\bin\Debug\net6.0\AcademyCode.DAL.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\bin\Debug\net6.0\AcademyCode.DAL.pdb
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.AssemblyInfo.cs
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\refint\AcademyCode.DAL.dll
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\AcademyCode.DAL.pdb
+C:\Users\dell\Desktop\CodeAcademy\CodeAcademy\AcademyCode\AcademyCode.DAL\obj\Debug\net6.0\ref\AcademyCode.DAL.dll

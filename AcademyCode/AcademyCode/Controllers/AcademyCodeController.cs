@@ -1,6 +1,8 @@
 ﻿using AcademyCode.BLL.Interface;
-using CodeAcademy.DAL.Model;
+using AcademyCode.DAL.Model;
+using AspNetCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.Intrinsics.Arm;
 
@@ -9,12 +11,16 @@ namespace AcademyCode.Controllers
     public class AcademyCodeController : Controller
     {
         private readonly IEmployee _Employee;
+        private readonly IDepartment _department;
        
 
-        public AcademyCodeController(IEmployee EmpRepo)
+        public AcademyCodeController(IEmployee EmpRepo,IDepartment department)
         {
 
             _Employee = EmpRepo;
+            _department = department;
+
+
         }
 
         public IActionResult Index()
@@ -34,6 +40,7 @@ namespace AcademyCode.Controllers
         }
         public IActionResult Create()
         {
+           // ViewBag.DepartmentID = new SelectList(_department, "Id", "Name");
             return View();
         }
         [HttpPost]

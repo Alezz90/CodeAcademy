@@ -1,7 +1,7 @@
 using AcademyCode.BLL.Interface;
 using AcademyCode.BLL.Repo;
-using CodeAcademy.DAL.Data;
-using CodeAcademy.DAL.Model;
+using AcademyCode.DAL.Data;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace AcademyCode

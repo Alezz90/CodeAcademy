@@ -428,19 +428,18 @@
       },
       "AcademyCode.BLL/1.0.0": {
         "dependencies": {
-          "CodeAcademy.DAL": "1.0.0"
+          "AcademyCode.DAL": "1.0.0"
         },
         "runtime": {
           "AcademyCode.BLL.dll": {}
         }
       },
-      "CodeAcademy.DAL/1.0.0": {
+      "AcademyCode.DAL/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0"
         },
         "runtime": {
-          "CodeAcademy.DAL.dll": {}
+          "AcademyCode.DAL.dll": {}
         }
       }
     }
@@ -757,7 +756,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CodeAcademy.DAL/1.0.0": {
+    "AcademyCode.DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
