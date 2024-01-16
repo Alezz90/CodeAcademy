@@ -1,31 +1,31 @@
 ﻿using AcademyCode.BLL.Interface;
+using AcademyCode.BLL.Repo;
 using AcademyCode.DAL.Model;
-using AspNetCore;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using System.Runtime.Intrinsics.Arm;
 
 namespace AcademyCode.Controllers
 {
     public class AcademyCodeController : Controller
     {
-        private readonly IEmployee _Employee;
-        private readonly IDepartment _department;
+        private readonly IUnitOfWork _unitOfWork;
        
 
-        public AcademyCodeController(IEmployee EmpRepo,IDepartment department)
+        public AcademyCodeController(IUnitOfWork unitOfWork)
         {
-
-            _Employee = EmpRepo;
-            _department = department;
-
-
+            _unitOfWork = unitOfWork;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string name)
         {
-            var Emp = _Employee.GetAll();
+            IEnumerable<Employee> Emp ;
+            
+            if(name != null)
+            {
+                Emp = _unitOfWork.EployeeRepo.Search(name);
+            }
+             Emp = _unitOfWork.EployeeRepo.GetAll();
             return View(Emp);
         }
         public IActionResult Details(int? id)
@@ -34,21 +34,28 @@ namespace AcademyCode.Controllers
             {
                 return BadRequest();
             }
-            var Emp = _Employee.Get(id.Value);
+            var Emp = _unitOfWork.EployeeRepo.Get(id.Value);
             return View(Emp);
 
         }
         public IActionResult Create()
         {
-           // ViewBag.DepartmentID = new SelectList(_department, "Id", "Name");
+           // var departments = _unitOfWork.DepartmentRepo.GetAll();
+            ViewBag.Departments = _unitOfWork.DepartmentRepo.GetAll();
             return View();
         }
         [HttpPost]
         public IActionResult Create(Employee Emp)
         {
+            
+           /* var departments = _unitOfWork.DepartmentRepo.GetAll();
+            ViewBag.DepartmentID = new SelectList(departments, "Id", "Name");*/
+
             if (ModelState.IsValid)
             {
-                _Employee.Create(Emp);
+                _unitOfWork.EployeeRepo.Create(Emp);
+
+               
 
                 return RedirectToAction("Index");
             }
@@ -62,7 +69,7 @@ namespace AcademyCode.Controllers
             {
                 return BadRequest();
             }
-            var Emp = _Employee.Get(id.Value);
+            var Emp = _unitOfWork.EployeeRepo.Get(id.Value);
             return View(Emp);
 
         }
@@ -70,14 +77,14 @@ namespace AcademyCode.Controllers
         public IActionResult Update(Employee Emp)
         {
 
-            _Employee.Update(Emp);
+            _unitOfWork.EployeeRepo.Update(Emp);
 
             return RedirectToAction("Index");
         }
         public IActionResult Delete(Employee Emp)
         {
 
-            _Employee.Delete(Emp);
+            _unitOfWork.EployeeRepo.Delete(Emp);
             return RedirectToAction("Index");
 
         }

@@ -1,58 +1,37 @@
 ﻿@model Employee
 
+@{
+    var departments = new SelectList(ViewBag?.Departments, "Id", "Name");
 
+    //ViewBag.DepartmentID = new SelectList(departments, "Id", "Name");
+}
 <h2> Add New Employee </h2>
 
 <form asp-action="Create">
-    
-    <div class="form-control">
-        <label asp-for="Name" class="form-control"></label>
+    <div asp-validation-summary="All"></div>
+
+
+    <label asp-for="Name" class="form-label"></label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-control">
-        <label asp-for="phoncontact" class="form-control"></label>
+   <br />
+    <label asp-for="phoncontact" class="form-label"></label>
         <input asp-for="phoncontact" class="form-control" id="Datestart" />
         <span asp-validation-for="phoncontact" class="text-danger"></span>
-      
-    </div>
+    <br />
     
-    <div class="form-control">
-        <label asp-for="DepartmentID" class="form-control"></label>
-        <select name="languages" id="lang" asp-for="DepartmentID" class="form-control">
-            <option value="javascript">JavaScript</option>
-            </select>
-          @*   @foreach (var item in Model) *@
-            {
-                <option value="javascript">JavaScript</option>
-            }
-            <span asp-validation-for="DepartmentID" class="text-danger"></span>
-      
-    </div>
-    <div class="form-control">
-        <label asp-for="Datestart" class="form-control"></label>
+    <label asp-for="Department" class="form-label"></label>
+    <select class="form-control" asp-for="DepartmentID" asp-items="@departments">
+        <option value="@null">--Select Department--</option>
+
+    </select>
+    <br />
+    <label asp-for="Datestart" class="form-label"></label>
         <input asp-for="Datestart" class="form-control" id="Datestart" />
         <span asp-validation-for="Datestart" class="text-danger"></span>
-    </div>
+    <br />
 
     <input type="submit" class="btn btn-primary" />
     | <a asp-action="Index" class="btn btn-dark"> Back to List</a>
 </form>
-@section validationcreate{
-  <script>
-    $(document).ready(function () {
-        $('form').validate({
-            rules: {
-                Datestart: {
-                    required: true,
-                },
-            },
-            messages: {
-                Datestart: {
-                    required: "Please enter a start date",
-                },
-            },
-        });
-    });
-</script>
-}
+

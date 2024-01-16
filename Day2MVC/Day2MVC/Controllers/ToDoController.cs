@@ -16,18 +16,19 @@ namespace Day2MVC.Controllers
         {
             this._dbContext = todo;
         }
-      /*  public IActionResult Index(int? id)
-        {
-            var _ToDosList = (from x in _dbContext.ToDos select x).ToList();
 
-            return View( _ToDosList);
-        }*/
-              public IActionResult Index(int? id)
+      public IActionResult Index(int? id)
               {
             var _ToDosList = (from x in _dbContext.ToDos select x).ToList();
 
-                      return View(_ToDosList);
-              }
+            if (id != null)
+            {
+                ViewBag.message = 1;
+        
+                return View(_ToDosList);
+            }
+            return View(_ToDosList);
+        }
 
             [HttpPost]
         public IActionResult Save(int? id, string name, string? description)
@@ -71,7 +72,7 @@ namespace Day2MVC.Controllers
                 return PartialView("_Update",MyToDO);
         }
 
-         /*  
+        
         public IActionResult Update(int? id, string name, string? description)
         {
                 var MyToDO = (from x in _dbContext.ToDos where x.TODOID == id select x).FirstOrDefault();
@@ -85,6 +86,6 @@ namespace Day2MVC.Controllers
         }
 
 
-        */
+        
     }
 }

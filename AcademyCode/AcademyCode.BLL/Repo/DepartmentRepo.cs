@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AcademyCode.BLL.Repo
 {
-    public class DepartmentRepo : UnitOfWork<Department>, IDepartment
+    public class DepartmentRepo : GenirecRepo<Department>, IDepartment
     {
         public DepartmentRepo(AcademyDBContext context) : base(context) { }
     }

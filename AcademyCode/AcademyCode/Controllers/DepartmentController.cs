@@ -1,5 +1,7 @@
 ﻿using AcademyCode.BLL.Interface;
 using AcademyCode.DAL.Model;
+using AcademyCode.ModelsVM;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.Intrinsics.Arm;
@@ -8,14 +10,16 @@ namespace AcademyCode.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly IDepartment _Department;
-        public DepartmentController(IDepartment department)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+        public DepartmentController(IUnitOfWork unitOfWork,IMapper mapper)
         {
-            _Department = department;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         public IActionResult Index()
         {
-            var Dep = _Department.GetAll();
+            var Dep = _unitOfWork.DepartmentRepo.GetAll();
             return View(Dep);
         }
         public IActionResult Details(int? id)
@@ -24,7 +28,7 @@ namespace AcademyCode.Controllers
             {
                 return BadRequest();
             }
-            var Dep = _Department.Get(id.Value);
+            var Dep = _unitOfWork.DepartmentRepo.Get(id.Value);
             return View(Dep);
 
         }
@@ -34,11 +38,12 @@ namespace AcademyCode.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Department Dep)
+        public IActionResult Create(DepartmentVM Dep)
         {
             if (ModelState.IsValid)
             {
-                _Department.Create(Dep);
+                var map = _mapper.Map<DepartmentVM,Department>(Dep);
+                _unitOfWork.DepartmentRepo.Create(map);
                 return RedirectToAction("Index");
             }
             return View();
@@ -50,7 +55,7 @@ namespace AcademyCode.Controllers
             {
                 return BadRequest();
             }
-            var Dep = _Department.Get(id.Value);
+            var Dep = _unitOfWork.DepartmentRepo.Get(id.Value);
             return View(Dep);
 
         }
@@ -60,7 +65,7 @@ namespace AcademyCode.Controllers
             if (ModelState.IsValid)
             {
 
-                _Department.Update(Dep);
+                _unitOfWork.DepartmentRepo.Update(Dep);
 
                 return RedirectToAction("Index");
             }
@@ -69,7 +74,7 @@ namespace AcademyCode.Controllers
         public IActionResult Delete(Department Dep)
         {
 
-            _Department.Delete(Dep);
+            _unitOfWork.DepartmentRepo.Delete(Dep);
             return RedirectToAction("Index");
 
         }

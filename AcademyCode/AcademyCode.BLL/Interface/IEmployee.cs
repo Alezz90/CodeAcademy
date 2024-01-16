@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace AcademyCode.BLL.Interface
 {
-    public interface IEmployee:IUnitOfWork<Employee>
+    public interface IEmployee:IGeneric<Employee>
     {
+        IEnumerable<Employee> Search(string name);
+
     }
 }

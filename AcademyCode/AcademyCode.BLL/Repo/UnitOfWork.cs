@@ -8,37 +8,16 @@ using System.Threading.Tasks;
 
 namespace AcademyCode.BLL.Repo
 {
-    public class UnitOfWork<T> : IUnitOfWork<T> where T : class
+    public class UnitOfWork : IUnitOfWork
     {
-        private AcademyDBContext _context;
+        public IEmployee EployeeRepo { get ; set ; }
+        public IDepartment DepartmentRepo { get ; set; }
 
-        public UnitOfWork(AcademyDBContext context)
-        {
-            _context = context;
+        public UnitOfWork(AcademyDBContext context) {
 
-        }
-        public int Create(T obj)
-        {
+        EployeeRepo = new EmployeeRepo(context);
+        DepartmentRepo = new DepartmentRepo(context);
 
-            _context.Set<T>().Add(obj);
-            return _context.SaveChanges();
-        }
-
-        public int Delete(T obj)
-        {
-            _context.Set<T>().Remove(obj);
-            return _context.SaveChanges();
-        }
-
-        public T Get(int id)
-        => _context.Set<T>().Find(id);
-
-        public IEnumerable<T> GetAll() => _context.Set<T>().ToList();
-
-        public int Update(T obj)
-        {
-            _context.Set<T>().Update(obj);
-            return _context.SaveChanges();
         }
     
     }

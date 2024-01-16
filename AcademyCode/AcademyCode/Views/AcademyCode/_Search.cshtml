@@ -1,0 +1,9 @@
+﻿@model Employee
+
+@using (Html.BeginForm("Index", "AcademyCode", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+    <div class=" container form-inline d-flex m-3">
+            <input asp-for="Name" class="form-control" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+}

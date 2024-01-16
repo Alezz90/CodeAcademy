@@ -31,7 +31,6 @@ namespace AcademyCode.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("MangerName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -58,6 +57,9 @@ namespace AcademyCode.DAL.Migrations
                     b.Property<DateTime>("Datestart")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("DepartmentID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -69,7 +71,18 @@ namespace AcademyCode.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DepartmentID");
+
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("AcademyCode.DAL.Model.Employee", b =>
+                {
+                    b.HasOne("AcademyCode.DAL.Model.Department", "Department")
+                        .WithMany()
+                        .HasForeignKey("DepartmentID");
+
+                    b.Navigation("Department");
                 });
 #pragma warning restore 612, 618
         }

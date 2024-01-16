@@ -1,8 +1,10 @@
 using AcademyCode.BLL.Interface;
 using AcademyCode.BLL.Repo;
 using AcademyCode.DAL.Data;
-
+using AcademyCode.DAL.Model;
+using AcademyCode.ModelProfile;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace AcademyCode
 {
@@ -18,10 +20,13 @@ namespace AcademyCode
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AcademyDBContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("defultConnection")));
 
+            builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
+            builder.Services.AddAutoMapper(m=>m.AddProfile(new DepatmentProfile()));
+            /*
             builder.Services.AddScoped<IEmployee, EmployeeRepo>();
             builder.Services.AddScoped<IDepartment, DepartmentRepo>();
 
-
+            **/
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

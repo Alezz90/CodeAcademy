@@ -3,8 +3,8 @@
 
 <h2> Add New Depaartment </h2>
 
-<form asp-action="Create">
-
+<form asp-controller="Department"  asp-action="Create">
+    <div asp-validation-summary="All"></div>
     <div class="form-control">
         <label asp-for="Name" class="form-control"></label>
         <input asp-for="Name" class="form-control" />
@@ -28,10 +28,6 @@
    
     <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>38sa8aq1
-}
-@*@section validationcreate{
-<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-}*@
+}
+

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AcademyCode.BLL.Interface
 {
-    public interface IDepartment : IUnitOfWork<Department>
+    public interface IDepartment : IGeneric<Department>
     {
     }
 }

@@ -7,6 +7,14 @@
 
 <h2> Employee List </h2>
 <a asp-action="Create" class="btn btn-primary"> Add New Employee</a>
+<form asp-action="Index" class="">
+<div class=" container form-inline d-flex m-3 mt-3">
+    <input  class="form-control" />
+    <input type="submit" value="Search" class="btn btn-primary" />
+</div>
+</form>
+
+
 @if (Model.Count() > 0)
  {
            

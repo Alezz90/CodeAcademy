@@ -41,8 +41,8 @@
     }
 </div>
        <!--creat new Item-->
-<div>
-    @*   @if (ViewData["_Update"] != null)
+<div id="prueba" name="prueba">
+       @if (ViewBag.message == 1)
     {
   
     @await Html.PartialAsync("_Update",new Day2MVC.Models.ToDo())
@@ -51,8 +51,10 @@
     else {
 
         @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())
-    }*@
+    }
+    @*
     @await Html.PartialAsync("_Update",new Day2MVC.Models.ToDo())
-    @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())
+    @await Html.PartialAsync("_AddItem",new Day2MVC.Models.ToDo())*@
         </div>
+
    
