@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0FC8tXpmrZ5ocHABG6zOF2yEh94KxmG2b0XiMg968zY=",
+  "Hash": "cZSJqwmrGrntXed85tEGJu3OUHQ1ubTfDB5UYZd4nSA=",
   "Source": "AcademyCode",
   "BasePath": "_content/AcademyCode",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\files\\Images\\7ecc827f-761c-40d3-819b-59e6a8bf6741Brown Wood Minimalist Profile LinkedIn Banner.png",
+      "SourceId": "AcademyCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\",
+      "BasePath": "_content/AcademyCode",
+      "RelativePath": "files/Images/7ecc827f-761c-40d3-819b-59e6a8bf6741Brown Wood Minimalist Profile LinkedIn Banner.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\Images\\7ecc827f-761c-40d3-819b-59e6a8bf6741Brown Wood Minimalist Profile LinkedIn Banner.png"
     },
     {
       "Identity": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\js\\site.js",

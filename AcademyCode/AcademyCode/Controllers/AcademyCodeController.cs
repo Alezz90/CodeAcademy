@@ -1,20 +1,24 @@
 ﻿using AcademyCode.BLL.Interface;
 using AcademyCode.BLL.Repo;
 using AcademyCode.DAL.Model;
-
+using AcademyCode.Helper;
+using AcademyCode.ModelsVM;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Reflection;
+using System.Runtime.Intrinsics.Arm;
 
 namespace AcademyCode.Controllers
 {
     public class AcademyCodeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-       
-
-        public AcademyCodeController(IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        public AcademyCodeController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public IActionResult Index(string name)
@@ -40,26 +44,24 @@ namespace AcademyCode.Controllers
         }
         public IActionResult Create()
         {
-           // var departments = _unitOfWork.DepartmentRepo.GetAll();
             ViewBag.Departments = _unitOfWork.DepartmentRepo.GetAll();
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Employee Emp)
+        public IActionResult Create(EmployeeVM Emp)
         {
             
            /* var departments = _unitOfWork.DepartmentRepo.GetAll();
             ViewBag.DepartmentID = new SelectList(departments, "Id", "Name");*/
 
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.EployeeRepo.Create(Emp);
-
-               
-
+          //  if (ModelState.IsValid)
+          //  {
+                Emp.ImagePath = DucomentConfi.DocumentUplod(Emp.formFile,"Images");
+                var map = _mapper.Map<EmployeeVM, Employee>(Emp);
+                _unitOfWork.EployeeRepo.Create(map);
                 return RedirectToAction("Index");
-            }
-            return View();
+          //  }
+          //  return View(Emp);
 
         }
        

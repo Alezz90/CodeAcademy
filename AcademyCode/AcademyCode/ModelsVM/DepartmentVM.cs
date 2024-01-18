@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using AcademyCode.DAL.Model;
 
 namespace AcademyCode.ModelsVM
 {
@@ -14,6 +15,7 @@ namespace AcademyCode.ModelsVM
         [MinLength(5)]
         public string Name { get; set; }
         public int numberOfemp { get; set; }
+        ICollection<Employee> Employees { get; set; } = new HashSet<Employee>();
 
     }
 }

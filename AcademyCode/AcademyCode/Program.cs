@@ -3,6 +3,7 @@ using AcademyCode.BLL.Repo;
 using AcademyCode.DAL.Data;
 using AcademyCode.DAL.Model;
 using AcademyCode.ModelProfile;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -22,11 +23,17 @@ namespace AcademyCode
 
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
             builder.Services.AddAutoMapper(m=>m.AddProfile(new DepatmentProfile()));
+            builder.Services.AddAutoMapper(m => m.AddProfile(new EmployeeProfile()));
             /*
             builder.Services.AddScoped<IEmployee, EmployeeRepo>();
             builder.Services.AddScoped<IDepartment, DepartmentRepo>();
 
             **/
+
+            builder.Services.AddIdentity<USERS, IdentityRole>()
+               .AddEntityFrameworkStores<AcademyDBContext>();
+
+            builder.Services.AddAuthentication();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
