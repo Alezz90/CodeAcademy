@@ -11,7 +11,8 @@ namespace AcademyCode.ModelsVM
         [MinLength(3)]
         public string Name { get; set; }
         public string phoncontact { get; set; }
-        public string? ImagePath { get; set; } = null;
+        [Required(AllowEmptyStrings = true)]
+        public string? ImagePath { get; set; }
         public IFormFile formFile { get; set; }
 
         public DateTime Datestart { get; set; }

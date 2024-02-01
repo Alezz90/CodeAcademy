@@ -50,13 +50,14 @@ namespace AcademyCode.Controllers
         [HttpPost]
         public IActionResult Create(EmployeeVM Emp)
         {
-            
-           /* var departments = _unitOfWork.DepartmentRepo.GetAll();
-            ViewBag.DepartmentID = new SelectList(departments, "Id", "Name");*/
 
-          //  if (ModelState.IsValid)
-          //  {
-                Emp.ImagePath = DucomentConfi.DocumentUplod(Emp.formFile,"Images");
+            /* var departments = _unitOfWork.DepartmentRepo.GetAll();
+             ViewBag.DepartmentID = new SelectList(departments, "Id", "Name");*/
+
+            //  if (ModelState.IsValid)
+            //  {
+            Emp.ImagePath = DucomentConfi.DocumentUplod(Emp.formFile,"Images");
+
                 var map = _mapper.Map<EmployeeVM, Employee>(Emp);
                 _unitOfWork.EployeeRepo.Create(map);
                 return RedirectToAction("Index");

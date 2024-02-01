@@ -19,6 +19,6 @@ namespace AcademyCode.DAL.Data
 
         public DbSet<Department> Department { get; set; }
 
-        public DbSet<USERS> USERS { get;set; }
+       // public DbSet<USERS> USERS { get;set; }
     }
 }

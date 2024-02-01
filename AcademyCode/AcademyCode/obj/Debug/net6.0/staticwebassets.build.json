@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cZSJqwmrGrntXed85tEGJu3OUHQ1ubTfDB5UYZd4nSA=",
+  "Hash": "R332aB6Ono2jAKubj53Q6oO7vypl78uke2hEM7Xlalk=",
   "Source": "AcademyCode",
   "BasePath": "_content/AcademyCode",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AcademyCode.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\css\\Login.css",
+      "SourceId": "AcademyCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\",
+      "BasePath": "_content/AcademyCode",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
       "Identity": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\css\\site.css",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\Images\\7ecc827f-761c-40d3-819b-59e6a8bf6741Brown Wood Minimalist Profile LinkedIn Banner.png"
+    },
+    {
+      "Identity": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\files\\Images\\9876788f-3500-458f-8634-5cb5601c5907images (4).jpg",
+      "SourceId": "AcademyCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\",
+      "BasePath": "_content/AcademyCode",
+      "RelativePath": "files/Images/9876788f-3500-458f-8634-5cb5601c5907images (4).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\Images\\9876788f-3500-458f-8634-5cb5601c5907images (4).jpg"
     },
     {
       "Identity": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\js\\site.js",

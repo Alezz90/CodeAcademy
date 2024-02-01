@@ -5,9 +5,11 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcademyCode", "AcademyCode\AcademyCode.csproj", "{77D861BF-16ED-4EC4-8FB4-70B9B73B6D18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyCode.DAL", "AcademyCode.DAL\AcademyCode.DAL.csproj", "{E1AEE3D2-FFF7-4F5F-AD02-D2D9F1ED0DB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcademyCode.DAL", "AcademyCode.DAL\AcademyCode.DAL.csproj", "{E1AEE3D2-FFF7-4F5F-AD02-D2D9F1ED0DB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyCode.BLL", "AcademyCode.BLL\AcademyCode.BLL.csproj", "{C4107A43-E389-4FE8-8F67-488B19501226}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcademyCode.BLL", "AcademyCode.BLL\AcademyCode.BLL.csproj", "{C4107A43-E389-4FE8-8F67-488B19501226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{EDF88F2B-CE05-4DDA-BE3B-A66361048751}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C4107A43-E389-4FE8-8F67-488B19501226}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4107A43-E389-4FE8-8F67-488B19501226}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4107A43-E389-4FE8-8F67-488B19501226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF88F2B-CE05-4DDA-BE3B-A66361048751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF88F2B-CE05-4DDA-BE3B-A66361048751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF88F2B-CE05-4DDA-BE3B-A66361048751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF88F2B-CE05-4DDA-BE3B-A66361048751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

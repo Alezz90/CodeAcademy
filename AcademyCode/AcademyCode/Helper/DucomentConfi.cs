@@ -14,7 +14,7 @@ namespace AcademyCode.Helper
             string path = Path.Combine(folderPath, fileName);
             var fs = new FileStream(path, FileMode.Create);
             formFile.CopyTo(fs);                                                
-            return path;
+            return fileName;
         }
         public static void DocumentDelete(string filename,string Foldername) 
         {

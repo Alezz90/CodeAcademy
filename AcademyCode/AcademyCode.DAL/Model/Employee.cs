@@ -19,7 +19,11 @@ namespace AcademyCode.DAL.Model
 
         public string Name { get; set; }
         public string phoncontact { get; set; }
+
+        //[Required(AllowEmptyStrings = true)]
         public string? ImagePath { get; set; }
+       // [EmailAddress]
+      //  public string? Email { get; set; }
 
         public DateTime Datestart { get; set; }
 

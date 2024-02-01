@@ -1,0 +1,45 @@
+
+.Card {
+    display: flex;
+    background: #f7f8f8;
+    box-shadow: 0 4px 8px 0 #837474;
+    border-radius: 15px;
+    height: 90vh;
+  }
+  .Card .textIntrodactio {
+    margin-right: 3%;
+    width: 100%;
+  }
+  .Card img {
+    width: 30vw;
+   height: auto;
+    border-bottom-left-radius: 15px;
+    border-radius: 50%;
+  }
+  .Card h1 {
+    color: #070707;
+    font-size: 3vw;
+    font-family: "Permanent Marker";
+    font-weight: 100;
+    margin-top: 10%;
+    margin-bottom: -20px;
+    padding-bottom: 0px;
+  }
+  .Card h2 {
+    color: #070707;
+    font-size: 2vw;
+    font-family: "Permanent Marker";
+    font-weight: 100;
+    text-align: center;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 0px;
+    padding-top: 0px;
+  }
+  .Card p {
+    display: block;
+    color: #070707;
+    font-size: 1.5vw;
+    margin: 0vw 5vw;
+  }
+  

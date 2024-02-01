@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/index.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script cript src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head ">
+            <h1>Cruds</h1>
+        </div>
+        <div class="inputs">
+            <input placeholder="title" type="text" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id ="total">22222</small>
+            </div>
+            <input placeholder=" count" type="number" id="count">
+            <input placeholder="category" type="text " id="category">
+            <div class="creatbt"> <button id="submit">create</button></div>
+           
+        </div>
+        <div class="output">
+            <div class="searchBlock">
+                <input type="text" id="search" placeholder="search">
+                <div class="btnSearch">
+                    <button type="button" id="SearchTitle">search by Name</button>
+                    <button type="button" id="Searchcategory">search by category</button>
+                </div>
+                <div id="DeleteAll">
+                    
+                </div>
+            </div>
+            <table class=" table table-bordered">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>Price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                   
+                </tr>
+                <tbody id="tobody">
+                    <tr>
+                        <td>${i}</td>
+                        <td>title</td>
+                        <td>${dataProduct[i].price}</td>
+                        <td>${dataProduct[i].taxes}</td>
+                        <td>${dataProduct[i].ads}</td>
+                        <td>${dataProduct[i].discount}</td>
+                        <td>${dataProduct[i].total}</td>
+                        <td>${dataProduct[i].category}</td>
+                        <td>
+                        <a class="btn bg-primary" id="Update">Update</a>
+                        <a class="btn bg-danger delete"  id="Delete">Delete</a>
+                    </td>
+                        </tr>
+                        <tr>
+                            <td>${i}</td>
+                            <td>${dataProduct[i].title}</td>
+                            <td>${dataProduct[i].price}</td>
+                            <td>${dataProduct[i].taxes}</td>
+                            <td>${dataProduct[i].ads}</td>
+                            <td>${dataProduct[i].discount}</td>
+                            <td>${dataProduct[i].total}</td>
+                            <td>${dataProduct[i].category}</td>
+                            </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./assests/js/index.js"></script>
+</body>
+</html>

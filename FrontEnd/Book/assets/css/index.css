@@ -1,0 +1,8 @@
+.backgroundImag{
+    background-image: url(../image/Bookbg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    opacity: 0.8;
+}

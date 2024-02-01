@@ -31,17 +31,16 @@
                 <tr>
                  <td> @item.Id </td>
                     <td> @item.Name </td>
-         
-                    @if (@item.ImagePath is null)
+
+                    @if (string.IsNullOrEmpty(item.ImagePath))
                     {
                         <td> <i class="bi bi-person-circle iconAccount"></i></td>
                     }
                     else
-                    {
-
+                         {
                         <td> <img src="~/files/Images/@item.ImagePath" class="img-fluid w-50 h-50" /> </td>
-
                     }
+                    <td> <i class="bi bi-person-circle iconAccount"></i></td>
                     <td> @item.phoncontact </td>
                     <td> @item.Datestart</td>
                     <td>

@@ -7,8 +7,11 @@ namespace AcademyCode.ModelsVM
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Gender { get; set; }
-        public string UserName { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
+        [EmailAddress]
+        [Compare("Email", ErrorMessage = "Email not match")]
+        public string EmailConfirmed { get; set; }
         [DataType(DataType.Password)]
 
         public string Password { get; set; }

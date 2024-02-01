@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AcademyCode.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +19,10 @@
     {
       "Id": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\files\\Images\\7ecc827f-761c-40d3-819b-59e6a8bf6741Brown Wood Minimalist Profile LinkedIn Banner.png",
       "PackagePath": "staticwebassets\\files\\Images\\7ecc827f-761c-40d3-819b-59e6a8bf6741Brown Wood Minimalist Profile LinkedIn Banner.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\files\\Images\\9876788f-3500-458f-8634-5cb5601c5907images (4).jpg",
+      "PackagePath": "staticwebassets\\files\\Images\\9876788f-3500-458f-8634-5cb5601c5907images (4).jpg"
     },
     {
       "Id": "C:\\Users\\dell\\Desktop\\CodeAcademy\\CodeAcademy\\AcademyCode\\AcademyCode\\wwwroot\\js\\site.js",

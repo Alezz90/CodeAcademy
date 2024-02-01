@@ -1,0 +1,50 @@
+htmls{
+    height: 100%;
+}
+body{
+    height: 100vh;
+}
+#content{
+    text-align: center;
+    margin-top: 5%;
+    padding: 10px;
+    opacity: 0.9;
+    color: blue;
+}
+.row{
+    margin: auto 0;
+}.card-content{
+    height: 120px;
+    font-size: 85px;
+    position: absolute;
+}.card-image{
+    height: 20px;
+    width: 100%;
+}.card-flip{
+    perspective: 1000px;
+}
+.flip{
+    transform: rotate(180deg);
+}
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}.front{
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.back{
+    transform: rotate(180deg);
+}
+    ::ng-deep div #content{
+        background-color: aliceblue;
+        opacity: 1;
+    }
+}.progress{
+    margin-bottom: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
