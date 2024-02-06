@@ -19,6 +19,15 @@ namespace CodeAcademyAPI
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<AcademyeeContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("defultConnection")));
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -32,7 +41,7 @@ namespace CodeAcademyAPI
 
             app.UseAuthorization();
 
-            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000/"));
+            app.UseCors();
 
          
 

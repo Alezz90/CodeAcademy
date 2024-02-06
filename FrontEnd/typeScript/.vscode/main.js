@@ -66,3 +66,50 @@ let cardsHtmlContent ='';
     }
  }
  }
+ //#endregion
+ //#region Game Logic
+ for(let index =0; index<numberOfCards/2;index++){
+    prepare.cards.push({
+        id:getRandomInt(0,numberOfCards),
+        src:'../assets/خلفيات-وردية-للبنات-18.jpg',
+        flip:'',
+        clickable:true,
+        index
+    });
+    prepare.cards.push({
+        id:getRandomInt(0,numberOfCards),
+        src:'../assets/خلفيات-وردية-للبنات-18.jpg',
+        flip:'',
+        clickable:true,
+        index
+    });
+ }
+ prepare.cards.sort((a,b)=> a.id > b.id ? 1:-1);
+ prepare.cards.array.forEach((item,index) => {
+    cardsHtmlContent += `  
+    <span class = "col-sm-3 col-lg-2">
+    <!--Card Flip-->
+    <div onclick="toggleFlip(${index})" class="card-flip">
+    <div id = "card-flip-${index}">
+    <div class="front">
+    <!-- content -->
+    <div class="card">
+      <img class="card-image" src="../assets/خلفيات-وردية-للبنات-18.jpg" alt="Loding">
+      <span class="card-content">${index+1}</span>
+      </div>
+      </div>
+      <div class="back">
+      <!--back content-->
+      <div class="card">
+      <img src="../assets/${item.index}.jpg" alt="frontImage" data-holder-rendered= style="height:120px;width:100%;display:block;">
+      </div>
+      </div>
+      </div>
+      </div>
+      <!-- End card Flip -->
+      </span>
+       `;
+ });
+ 
+document.getElementById('cards').innerHTML = cardsHtmlContent;
+//#endregion
