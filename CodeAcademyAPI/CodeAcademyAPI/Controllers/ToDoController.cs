@@ -2,6 +2,7 @@
 using CodeAcademyAPI.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace CodeAcademyAPI.Controllers
 {
@@ -50,7 +51,15 @@ return todo;
             var todoList = _context.ToDo.Find(id);
             return Ok(todoList);
         }
-      
+        [HttpGet("getDayTodo/{id:int}")]
+        public ActionResult getDay(int id)
+        {
+           
+            var todoList = _context.ToDo.Where(e=>e.DayNumber.Equals(id)).ToList();
+            return Ok(todoList);
+        }
+
+
         [HttpGet("getListTodo")]
         public ActionResult getAll()
         {

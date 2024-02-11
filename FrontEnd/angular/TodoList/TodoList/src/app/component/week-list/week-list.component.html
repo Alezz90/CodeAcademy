@@ -1,0 +1,213 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col bg-danger-subtle" id="Saturday ">
+      <h2>Saturday</h2>
+      <div
+      *ngFor="let item of newTodo;let i = index"
+      class="card bg-transparent ">
+      <span *ngIf="item.dayNumber === 1">
+        <div class=" d-flex justify-content-between">
+          <p>
+            {{i+1}}
+            <!-- {{ item.id }} -->
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+      </span>
+    </div>
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+    <div class="col bg-dark-subtle">
+      <h2>Sunday</h2>
+      <div
+      *ngFor="let item of newTodo"
+      class="card border-1 bg-transparent ">
+      <span *ngIf="item.dayNumber === 2">
+        <div class="card-body d-flex justify-content-between">
+          <p>
+            {{ item.id }}
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+      </span>
+    </div>
+      <input
+        type="text"
+        *ngIf="isInputVisible"
+        [(ngModel)]="addElemnt"
+        keyup.enter="AddEelemnt(item.dayNumber,addElemnt)"
+      />
+
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+        (click)="toggleInputVisibility()"
+      />
+    </div>
+    <div class="col bg-info-subtle">
+      <h2>Monday</h2>
+      <div
+        *ngFor="let item of newTodo"
+        class="card border-1 bg-transparent ">
+        <span *ngIf="item.dayNumber === 3">
+          <div class="card-body d-flex justify-content-between">
+            <p>
+              {{ item.id }}
+            </p>
+            <p>
+              {{ item.title }}
+            </p>
+            <input type="checkbox" class="material-symbols-outlined" />
+            <input type="button" class="btn bg-warning" value="Edit" />
+          </div>
+        </span>
+      </div>
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+    <div class="col bg-primary-subtle">
+      <h2>Tuesday</h2>
+      <div
+      *ngFor="let item of newTodo"
+      class="card border-1 bg-transparent ">
+      <span *ngIf="item.dayNumber === 4">
+        <div class="card-body d-flex justify-content-between">
+          <p>
+            {{ item.id }}
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+      </span>
+    </div>
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+  </div>
+</div>
+<div class="container text-center">
+  <div class="row">
+    <div class="col bg-success" style="--bs-bg-opacity: 0.5">
+      <h2>Wednesday</h2>
+      <div
+      *ngFor="let item of newTodo"
+      class="card border-1 bg-transparent ">
+      <span *ngIf="item.dayNumber === 5">
+        <div class="card-body d-flex justify-content-between">
+          <p>
+            {{ item.id }}
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+      </span>
+    </div>
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+    <div class="col bg-warning-subtle">
+      <h2>Thursday</h2>
+      <div
+      *ngFor="let item of newTodo"
+      class="card border-1 bg-transparent ">
+      <span *ngIf="item.dayNumber === 6">
+        <div class="card-body d-flex justify-content-between">
+          <p>
+            {{ item.id }}
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+      </span>
+    </div>
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+    <div class="col bg-success-subtle">
+      <h2>Friday</h2>
+      <div
+      *ngFor="let item of newTodo"
+      class="card border-1 bg-transparent ">
+      <span *ngIf="item.dayNumber === 7">
+        <div class="card-body d-flex justify-content-between">
+          <p>
+            {{ item.id }}
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+      </span>
+    </div>
+      <input
+        type="button"
+        value="I will do"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+    <div class="col">
+      <h2>Nots</h2>
+      <div
+      *ngFor="let item of newTodo"
+      class="card border-1 bg-transparent ">
+      <span *ngIf="item.dayNumber === 8">
+        <div class="card-body d-flex justify-content-between">
+          <p>
+            {{ item.id }}
+          </p>
+          <p>
+            {{ item.title }}
+          </p>
+          <input type="checkbox" class="material-symbols-outlined" />
+          <input type="button" class="btn bg-warning" value="Edit" />
+        </div>
+        
+      </span>
+    </div>
+    <input type="text" #Add class="form-control" placeholder="I have to finish.....">
+    <button  class="btn btn-warning" (click)="AddEelemnt(Add.value,8)"> Add </button> 
+
+      <input
+        type="button"
+        value="Please remamber"
+        class="btn bg-primary-subtle Add"
+      />
+    </div>
+  </div>
+</div>
